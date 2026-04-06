@@ -82,7 +82,7 @@ Live Activities Plugin
 Permission Handler
 ⚙️ Setup & Installation
 1. Clone the repository
-git clone https://github.com/mostafayoussef10993/Live_Activities/
+git clone https://github.com/mostafayoussef10993/Live-Activities-Match-Tracker
 cd live-activities-app
 2. Install dependencies
 flutter pub get
