@@ -1,4 +1,6 @@
 // Provider responsible for managing match state and logic
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:live_activities_usecase/live_activity/live_activity_service.dart';
 import 'package:live_activities_usecase/match/match_entity.dart';
@@ -48,8 +50,7 @@ class MatchProvider extends ChangeNotifier {
 
   // Start match
   Future<void> startMatch() async {
-    if (!permissionGranted) return;
-
+    if (Platform.isAndroid && !permissionGranted) return;
     final id = await _service.startMatch(_buildMatch());
     activityId = id;
     notifyListeners();
